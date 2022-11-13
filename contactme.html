@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact me form</title>
+    <script defer src="javascript.js"></script>
+</head>
+<style>
+    body{
+        background-color: #3aafa9;
+        border: 3px solid #172528;
+        padding: 10px;
+        font-family: cursive;
+        padding:  25px 25px;
+        padding-right: 45px;
+        border-radius: 40px;
+    }
+    .navbar{
+        position: sticky;
+        display: flex;
+        align-content: flex-end;
+        margin-top: 18px;
+    }
+    .navbar:hover{
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+    .backtohome{
+        text-align: center;
+        color: #172528;
+        font-size: 200%;
+        width: 100%;
+        background-color: #def2f1;
+        text-decoration: none;
+        border-radius: 60px;
+        display: block;
+    }
+    a:hover{
+        color: red;
+    }
+    .heading{
+        text-align: center; 
+    }
+    input[type="name"],
+    input[type="text"],
+    input[type="number"],
+    input[type="password"],
+    input[type="email"],
+    input[type="date"],
+    textarea{
+    width: 100%;
+    font-size: large;
+    padding: 12px;
+    background-color: rgba(213, 228, 228, 0.897);
+    }
+    input[type="submit"]{
+        align-items: center;
+        height: 2.5em;
+        width: 25%;
+        font-size: 22px;
+        background-color: #17252A;
+        color: #DEF2F1;
+        border-radius: 30px;
+    }
+    .form{
+        font-size: 22px;
+    }
+    input[type="radio"]{
+        width: 1.5em;
+        height: 1.5em;
+    }
+    .button{
+        text-align: center;
+    }
+    input[type="submit"]:hover{
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        color: lime;
+    }
+</style>
+
+<body>
+    <div class="navbar">
+        <a href="G:\HTML PROGRAM\portfolio\portfolio.html" target="_blank" class="backtohome">Home</a>
+    </div>
+    <form action="" class="form"  id='form'>
+        <h1 class="heading">Contact Me</h1>
+        <h2>Contact Information</h2>
+        <p>( A <b>'*'</b> means that the field is "required" and you won't be able to submit the form without filling that field.<br>
+            If the page refreshes that means your response has been recorded.)
+        </p>
+        <p>Name:<sup>*</sup> <input type="text" name="name" class="name" id="username" placeholder="Darshan Sanghavi" ></p>
+        <fieldset>
+            <legend>Gender</legend>
+            <p>
+                 <input type="radio" name="gender" id="male"  &npsb >Male
+                 <input type="radio"  &npsb name="gender" id="female" >Female   
+            </p>
+        </fieldset>
+        <br>
+        Today's date: <input type="date" name="exp_date" id="exp_date">
+        <br>
+        <br>
+        Address: <textarea name="address" id="address" cols="30" rows="5"></textarea>
+        <br>
+        <br>
+        Pincode: <input type="number" name="pincode" id="pincode">
+        <br>
+        <br>
+        Email:<sup>*</sup> <input type="email" name="email" id="email" >
+        <br>
+        <br>
+        Password:<sup>*</sup> <input type="password" name="password" id="password"  placeholder="minimun 8 characters">
+        <br>
+        <br>
+        Contact No:<sup>*</sup> <input type="number" name="contact" id="contact" >
+        <br>
+        <br>
+        <div id="error"></div>
+        <div class="button">
+            <input type="submit" value="Submit">
+        </div>
+        <br>
+
+        <hr>
+    </form>
+</body>
+</html>

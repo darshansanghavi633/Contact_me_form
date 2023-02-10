@@ -11,12 +11,6 @@ form.addEventListener('submit', (e) => {
     if (contact.value.length != 10) {
         messages.push('Conatct number should be of 10 digits\n')
     }
-    if (password.value.length <= 8) {
-        messages.push('Password must be longer than 8 characters & shorter than 20 characters\n')   
-    }
-    if (password.value.length >= 20) {
-        messages.push('Password must be longer than 8 characters & shorter than 20 characters\n')   
-    }
     if ( email.value ==='' || email.value == null ) {
         messages.push('Please fill out email\n')
     }
@@ -24,4 +18,8 @@ form.addEventListener('submit', (e) => {
         e.preventDefault()
         errorElement.innerText = messages.join('')  
     }
+    else{
+        alert("Your respnse is recorded!")
+    }
 })
+

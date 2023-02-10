@@ -8,14 +8,18 @@
     <script defer src="javascript.js"></script>
 </head>
 <style>
+    #error{
+        color:red;  
+    }
+    html{
+        padding: 50px;
+    }
     body{
         background-color: #3aafa9;
         border: 3px solid #172528;
-        padding: 10px;
         font-family: cursive;
-        padding:  25px 25px;
-        padding-right: 45px;
         border-radius: 40px;
+        padding: 5%;
     }
     .navbar{
         position: sticky;
@@ -43,12 +47,8 @@
     .heading{
         text-align: center; 
     }
-    input[type="name"],
-    input[type="text"],
-    input[type="number"],
-    input[type="password"],
-    input[type="email"],
-    input[type="date"],
+
+    input,
     textarea{
     width: 100%;
     font-size: large;
@@ -78,17 +78,38 @@
         box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
         color: lime;
     }
+    @media screen and (max-width: 650px) {
+        input,textarea{
+            font-size: medium;
+            width: 90%;
+        }
+        .backtohome{
+            font-size: 100%;
+        }
+        .form{
+            font-size: 11px;
+        }
+        html{
+            padding: none;
+        }
+        body{
+            padding: none;
+        }
+        input[type="submit"]{
+            font-size: 11px;
+            width: 30%;
+            align-content: center;        }
+    }
 </style>
 
 <body>
     <div class="navbar">
         <a href="G:\HTML PROGRAM\portfolio\portfolio.html" target="_blank" class="backtohome">Home</a>
     </div>
-    <form action="" class="form"  id='form'>
+    <form action="" class="form"  id='form' onsubmit="myFunction()">
         <h1 class="heading">Contact Me</h1>
         <h2>Contact Information</h2>
-        <p>( A <b>'*'</b> means that the field is "required" and you won't be able to submit the form without filling that field.<br>
-            If the page refreshes that means your response has been recorded.)
+        <p>( A <b>'*'</b> means that the field is "required" and you won't be able to submit the form without filling that field.)<br>
         </p>
         <p>Name:<sup>*</sup> <input type="text" name="name" class="name" id="username" placeholder="Darshan Sanghavi" ></p>
         <fieldset>
@@ -111,13 +132,12 @@
         Email:<sup>*</sup> <input type="email" name="email" id="email" >
         <br>
         <br>
-        Password:<sup>*</sup> <input type="password" name="password" id="password"  placeholder="minimun 8 characters">
-        <br>
-        <br>
         Contact No:<sup>*</sup> <input type="number" name="contact" id="contact" >
         <br>
         <br>
-        <div id="error"></div>
+        <strong>
+            <div id="error"></div>
+        </strong>
         <div class="button">
             <input type="submit" value="Submit">
         </div>
